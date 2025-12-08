@@ -71,7 +71,7 @@
 
     <!-- PDF Viewer -->
     <div class="pdf-viewer">
-      <iframe id="pdfFrame" src="Current_Hazard_Nr_09.pdf" frameborder="0"></iframe>
+      <iframe id="pdfFrame" src="Current%20Hazard%20No.%2009.pdf" frameborder="0"></iframe>
     </div>
 
     <!-- Download button -->
@@ -81,11 +81,10 @@
   <script>
     document.getElementById("downloadBtn").addEventListener("click", () => {
       const link = document.createElement("a");
-      link.href = "Current Hazard No. 09.pdf"; // PDF file path
-      link.download = "Current Hazard No. 09.pdf";
+      link.href = "Current%20Hazard%20No.%2009.pdf"; // URL-encoded spaces
+      link.download = "Current Hazard No. 09.pdf";   // Friendly download name
       link.click();
     });
   </script>
 </body>
 </html>
-
