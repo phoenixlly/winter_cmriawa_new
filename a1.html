@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Hazard Nr. 09</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .pdf-viewer {
+      width: 100%;
+      height: 600px;
+      margin-bottom: 20px;
+    }
+
+    .pdf-viewer iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .pdf-viewer {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Current Hazard Nr. 09</h1>
+
+    <!-- PDF Viewer -->
+    <div class="pdf-viewer">
+      <iframe id="pdfFrame" src="Current_Hazard_Nr_09.pdf" frameborder="0"></iframe>
+    </div>
+
+    <!-- Download button -->
+    <button id="downloadBtn">Download PDF</button>
+  </div>
+
+  <script>
+    document.getElementById("downloadBtn").addEventListener("click", () => {
+      const link = document.createElement("a");
+      link.href = "Current_Hazard_Nr_09.pdf"; // PDF file path
+      link.download = "Current_Hazard_Nr_09.pdf";
+      link.click();
+    });
+  </script>
+</body>
+</html>
